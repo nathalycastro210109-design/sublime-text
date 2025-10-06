@@ -1,0 +1,156 @@
+/* ====== ESTILOS GENERALES ====== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+/* ====== HEADER ====== */
+header {
+  background: linear-gradient(90deg, #0078ff, #005bcc);
+  color: white;
+  padding: 10px 0;
+}
+
+.contenedor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+}
+
+.logo img {
+  width: 120px;
+}
+
+/* ====== MENÚ PRINCIPAL ====== */
+/* Using > selector to target only the main ul, not the submenus */
+.menu > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: block;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+
+/* ====== SUBMENÚ ====== */
+.submenu-lista {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #0078ff;
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  border-radius: 6px;
+  min-width: 160px;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Ítems del submenú */
+.submenu-lista li a {
+  padding: 10px 15px;
+  color: white;
+  font-weight: normal;
+}
+
+.submenu-lista li a:hover {
+  background-color: #005bcc;
+}
+
+/* Hover rule removed, functionality will be handled by JavaScript */
+
+/* ====== SECCIÓN ENCABEZADO ====== */
+.encabezado {
+  background-color: #e3f0ff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.encabezado h1 {
+  color: #0059c9;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* ====== CONTENIDO ====== */
+.contenido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 10%;
+  background-color: #fff;
+  gap: 40px;
+}
+
+.info {
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+
+.info h2 {
+  color: #0059c9;
+}
+
+.info p, .info ul {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ====== GALERÍA ====== */
+.galeria {
+  flex: 1 1 400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* ====== RESPONSIVO ====== */
+@media (max-width: 768px) {
+  .contenedor-header {
+    flex-direction: column;
+  }
+
+  .menu > ul { /* Also apply the fix here */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
