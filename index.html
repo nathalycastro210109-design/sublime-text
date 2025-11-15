@@ -1,55 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Kriplaytoll</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
-    <header>
+    <div class="background"></div>
+    <header class="navbar">
+        <div class="logo">
+            Kriplay<span>toll</span>
+        </div>
         <nav>
-            <a href="#" class="logo">
-                <img src="img/milugarlogo.png" alt="MiLugar Logo">
-            </a>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#" class="login-btn">Login</a></li>
-            </ul>
+            <a href="#">Inicio</a>
+            <a href="#">Sobre mí</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
         </nav>
     </header>
 
-    <div class="login-container">
-        <div class="login-box">
-            <span class="close-btn">&times;</span>
-            <h2>Login</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                    <input type="email" required>
-                    <label>Email</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"><i class="fa-solid fa-lock"></i></span>
-                    <input type="password" required>
-                    <label>Password</label>
-                </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox"> Remember me</label>
-                    <a href="#">Forgot Password?</a>
-                </div>
-                <button type="submit" class="submit-btn">Login</button>
-                <div class="register-link">
-                    <p>Don't have an account? <a href="#">Register</a></p>
-                </div>
-            </form>
+    <main class="hero">
+        <div class="hero-img">
+            <img src="img/kri.png" alt="Kri">
         </div>
-    </div>
-
-    <script src="js/main.js"></script>
+        <div class="hero-text">
+            <h1>
+                ¡Hola Bienvenido o bienvenida! Soy kri, un pequeño creador de contenido que se dedica a realizar comisiones, en esta pagina web
+                <p>encontraras principalmente:</p>
+                <span>Miniaturas</span>
+                <span>Renders 3d de Minecraft</span>
+                <span>Animaciones de Minecraft</span>
+            </h1>
+            <button>Contactame</button>
+        </div>
+    </main>
 </body>
 </html>
