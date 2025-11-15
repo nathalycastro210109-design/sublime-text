@@ -1,138 +1,141 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-}
-
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../img/fondo.gif');
+    background-image: url('../img/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -1;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+html {
+    height: 100%;
 }
 
 .navbar {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 20px 60px;
-background: white;
-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(255, 255, 255, 0.8); /* Make navbar slightly transparent */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .logo {
-font-size: 28px;
-font-weight: bold;
-color: #333;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
 }
 
 .logo span {
-color: #DA8AFF;
+    color: #DA8AFF;
 }
 
 .navbar nav {
-display: flex;
-align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .navbar nav a {
-margin-left: 15px;
-text-decoration: none;
-transition: transform 0.3s ease;
+    margin-left: 15px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    color: #333; /* Ensure nav links are visible */
 }
 
 .navbar nav a:hover {
-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .hero {
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    background: transparent; /* Make hero section transparent */
+    min-height: calc(100vh - 80px); /* Adjust height to fill viewport below navbar */
 }
 
 .hero-img {
-position: relative;
-width: 380px;
-height: 380px;
-border-radius: 50%;
-overflow: hidden;
+    position: relative;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 .hero-img::before {
-content: '';
-position: absolute;
-top: -50%;
-left: -50%;
-width: 200%;
-height: 200%;
-background: linear-gradient(45deg, #DA8AFF, #956DC0, #C74FFF, #500075);
-background-size: 200% 200%;
-animation: gradientAnimation 10s ease infinite;
-z-index: 1;
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, #DA8AFF, #956DC0, #C74FFF, #500075);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+    z-index: 1;
 }
 
 @keyframes gradientAnimation {
-0% { transform: rotate(0deg); }
-100% { transform: rotate(360deg); }
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 .hero-img img {
-position: relative;
-width: 95%;
-height: 95%;
-border-radius: 50%;
-object-fit: cover;
-top: 2.5%;
-left: 2.5%;
-z-index: 2;
+    position: relative;
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    object-fit: cover;
+    top: 2.5%;
+    left: 2.5%;
+    z-index: 2;
 }
 
 .hero-text {
-margin-left: 60px;
-max-width: 500px;
-background-color: rgba(255, 255, 255, 0.8);
-padding: 20px;
-border-radius: 10px;
+    margin-left: 60px;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.7); /* Add a semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .hero-text h1 {
-font-size: 22px;
-color: #444;
-line-height: 1.6;
+    font-size: 22px;
+    color: #444;
+    line-height: 1.6;
 }
 
 .hero-text h1 p {
-margin: 10px 0;
+    margin: 10px 0;
 }
 
 .hero-text span {
-color: #7E4DB3;
-font-weight: bold;
-font-size: 24px;
-display: block;
+    color: #7E4DB3;
+    font-weight: bold;
+    font-size: 24px;
+    display: block;
 }
 
 button {
-margin-top: 25px;
-background: #C74FFF;
-border: none;
-padding: 15px 35px;
-color: white;
-font-size: 18px;
-font-weight: bold;
-border-radius: 8px;
-cursor: pointer;
-transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 25px;
+    background: #C74FFF;
+    border: none;
+    padding: 15px 35px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-background: #500075;
-transform: scale(1.05);
+    background: #500075;
+    transform: scale(1.05);
 }
