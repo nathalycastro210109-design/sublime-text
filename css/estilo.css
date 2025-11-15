@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #956DC0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.logo span {
+    color: #DA8AFF;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.navbar nav a:hover {
+    transform: scale(1.1);
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    background: #f4f0f8;
+}
+
+.hero-img {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.hero-img::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, #DA8AFF, #956DC0, #C74FFF, #500075);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+    z-index: 1;
+}
+
+@keyframes gradientAnimation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hero-img img {
+    position: relative;
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    object-fit: cover;
+    top: 2.5%;
+    left: 2.5%;
+    z-index: 2;
+}
+
+.hero-text {
+    margin-left: 60px;
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 22px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.hero-text h1 p {
+    margin: 10px 0;
+}
+
+.hero-text span {
+    color: #7E4DB3;
+    font-weight: bold;
+    font-size: 24px;
+    display: block;
+}
+
+button {
+    margin-top: 25px;
+    background: #C74FFF;
+    border: none;
+    padding: 15px 35px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #500075;
+    transform: scale(1.05);
+}
