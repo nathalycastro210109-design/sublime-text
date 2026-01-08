@@ -1,55 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Producto Destacado</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#" class="logo">
-                <img src="img/milugarlogo.png" alt="MiLugar Logo">
-            </a>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#" class="login-btn">Login</a></li>
-            </ul>
-        </nav>
+
+    <header class="header">
+        <h1>Mieles Fest</h1>
+        <p>el mejor aliado para ti</p>
     </header>
 
-    <div class="login-container">
-        <div class="login-box">
-            <span class="close-btn">&times;</span>
-            <h2>Login</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                    <input type="email" required>
-                    <label>Email</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"><i class="fa-solid fa-lock"></i></span>
-                    <input type="password" required>
-                    <label>Password</label>
-                </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox"> Remember me</label>
-                    <a href="#">Forgot Password?</a>
-                </div>
-                <button type="submit" class="submit-btn">Login</button>
-                <div class="register-link">
-                    <p>Don't have an account? <a href="#">Register</a></p>
-                </div>
-            </form>
+    <main class="product-container">
+        <div class="product-image">
+            <img src="img/foto.jpg" alt="foto">
         </div>
-    </div>
 
-    <script src="js/main.js"></script>
+        <div class="product-info">
+            <h2>Descripción</h2>
+            <p>
+                Las Mieles VIP (como Royal Honey VIP) son suplementos alimenticios en sobres individuales, mezclados con miel pura, jalea real, polen y extractos de hierbas como ginseng o Tongkat Ali, diseñados para hombres como un potenciador natural de energía y rendimiento sexual, prometiendo mayor vitalidad, erecciones más firmes y resistencia, consumiéndose antes de la actividad física o sexual para un impulso rápido.
+            </p>
+
+            <h3>que contienen?</h3>
+            <ul>
+                <li>✔ miel pura</li>
+                <li>✔ Jalea Real.</li>
+                <li>✔ Polen de Abeja.</li>
+                <li>✔ Extractos de hierbas de la selva tropical (como Tongkat Ali y ginseng).</li>
+                <li>✔A veces, otros ingredientes como guaraná o canela.</li>
+            </ul>
+
+            <h2>Para que se usan?</h2>
+            <p>
+                Aumento de energía y vitalidad: Para mejorar el rendimiento físico general.
+               Mejora del rendimiento sexual: Ayudan a lograr erecciones más firmes, aumentar el deseo y prevenir la eyaculación precoz.
+               Estimulante natural: Sin químicos, se promociona como una alternativa natural para la potencia masculina.
+               </p>
+            <div class="price">
+                $1,200 MXN x caja
+                $120 MXN x sobre
+            </div>
+
+        </div>
+    </main>
+
 </body>
 </html>
